@@ -1,4 +1,4 @@
-﻿namespace SortedCodingTest.Services
+﻿namespace SortedCodingTest.Services.Exceptions
 {
     public class RainfallApiClientException : Exception
     {
