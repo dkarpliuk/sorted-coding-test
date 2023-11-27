@@ -26,7 +26,7 @@ namespace SortedCodingTest.Services
 
             try
             {
-                var response = await client.GetAsync($"/id/stations/{stationId}/readings?_sorted&_limit={limit}");
+                var response = await client.GetAsync($"id/stations/{stationId}/readings?_sorted&_limit={limit}");
 
                 response.EnsureSuccessStatusCode();
 

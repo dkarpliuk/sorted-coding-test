@@ -8,9 +8,9 @@ namespace SortedCodingTest.Services
 {
     public class RainfallService : IRainfallService
     {
-        private readonly RainfallApiClient _client;
+        private readonly IRainfallApiClient _client;
 
-        public RainfallService(RainfallApiClient client)
+        public RainfallService(IRainfallApiClient client)
         {
             _client = client ?? throw new ArgumentNullException(nameof(client));
         }

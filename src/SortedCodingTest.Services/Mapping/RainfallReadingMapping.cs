@@ -8,7 +8,7 @@ namespace SortedCodingTest.Services.Mapping
         {
             return new RainfallReading
             {
-                DateMeasured = reading.Date,
+                DateMeasured = reading.DateTime,
                 AmountMeasured = reading.Value
             };
         }
