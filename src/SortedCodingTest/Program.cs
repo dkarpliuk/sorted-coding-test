@@ -18,6 +18,8 @@ namespace SortedCodingTest
 
             var app = builder.Build();
 
+            app.UseMiddleware<ErrorHandlerMiddleware>();
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
