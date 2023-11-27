@@ -1,4 +1,4 @@
-﻿namespace SortedCodingTest.Services
+﻿namespace SortedCodingTest.Services.Models
 {
     public class RainfallApiReading
     {

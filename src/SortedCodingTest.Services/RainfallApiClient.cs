@@ -1,12 +1,13 @@
 ﻿using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
+using SortedCodingTest.Services.Exceptions;
+using SortedCodingTest.Services.Interfaces;
+using SortedCodingTest.Services.Models;
 
 namespace SortedCodingTest.Services
 {
     public class RainfallApiClient : IRainfallApiClient
     {
-        private const int MaxStationReadingsLimit = 10000;
-
         private readonly RainfallApiClientOptions _options;
 
         public RainfallApiClient(IOptions<RainfallApiClientOptions> options)
@@ -21,11 +22,6 @@ namespace SortedCodingTest.Services
 
         public async Task<ICollection<RainfallApiReading>> GetLatestStationReadingsAsync(int stationId, int limit)
         {
-            if (limit > MaxStationReadingsLimit)
-            {
-                throw new RainfallApiClientException($"Station readings limit exceeded, maximum is {MaxStationReadingsLimit}");
-            }
-
             using var client = new HttpClient { BaseAddress = new Uri(_options.BaseUrl) };
 
             try

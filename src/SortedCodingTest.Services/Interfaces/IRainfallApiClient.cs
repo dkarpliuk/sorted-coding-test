@@ -1,4 +1,6 @@
-﻿namespace SortedCodingTest.Services
+﻿using SortedCodingTest.Services.Models;
+
+namespace SortedCodingTest.Services.Interfaces
 {
     public interface IRainfallApiClient
     {
