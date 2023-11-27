@@ -16,9 +16,9 @@ namespace SortedCodingTest.Controllers
             _rainfallService = rainfallService ?? throw new ArgumentNullException(nameof(rainfallService));
         }
 
-        [HttpGet(Name = "GetLatestStationReadings")]
+        [HttpGet]
         [Route("id/{stationId}/readings")]
-        public async Task<RainfallReadingResponse> GetLatestStationReadingsAsync(LatestStationReadingsRequest request)
+        public async Task<RainfallReadingResponse> GetLatestStationReadingsAsync([FromRoute, FromQuery] LatestStationReadingsRequest request)
         {
             return await _rainfallService.GetLatestStationReadingsAsync(request.StationId, request.Maximum);
         }

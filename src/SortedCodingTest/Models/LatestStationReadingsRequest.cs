@@ -7,7 +7,7 @@ namespace SortedCodingTest.Models
     {
         private const int MaxStationReadingsLimit = 10000;
 
-        [FromRoute]
+        [FromRoute(Name = "stationId")]
         public int StationId { get; set; }
 
         [FromQuery]

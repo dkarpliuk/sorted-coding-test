@@ -1,3 +1,6 @@
+using SortedCodingTest.Services;
+using SortedCodingTest.Services.Interfaces;
+
 namespace SortedCodingTest
 {
     public class Program
@@ -6,16 +9,15 @@ namespace SortedCodingTest
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.Configure<RainfallApiClientOptions>(builder.Configuration.GetSection(nameof(RainfallApiClientOptions)));
+            builder.Services.AddTransient<IRainfallApiClient, RainfallApiClient>();
+            builder.Services.AddTransient<IRainfallService, RainfallService>();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -23,9 +25,6 @@ namespace SortedCodingTest
             }
 
             app.UseHttpsRedirection();
-
-            app.UseAuthorization();
-
 
             app.MapControllers();
 

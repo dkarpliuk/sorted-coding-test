@@ -2,7 +2,7 @@
 {
     public class RainfallApiReading
     {
-        public DateTime Date { get; set; }
+        public DateTime DateTime { get; set; }
 
         public decimal Value { get; set; }
     }
