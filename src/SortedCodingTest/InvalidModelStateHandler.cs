@@ -4,9 +4,9 @@ using SortedCodingTest.Services.Exceptions;
 
 namespace SortedCodingTest
 {
-    public static class InvalidModelStateFactory
+    public static class InvalidModelStateHandler
     {
-        public static IServiceCollection AddInvalidModelStateFactory(this IServiceCollection services)
+        public static IServiceCollection AddInvalidModelStateHandler(this IServiceCollection services)
         {
             return services.PostConfigure<ApiBehaviorOptions>(options => options.InvalidModelStateResponseFactory = HandleErrors);
         }

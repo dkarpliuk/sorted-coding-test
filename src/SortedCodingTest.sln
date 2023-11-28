@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortedCodingTest", "SortedCodingTest\SortedCodingTest.csproj", "{28D3FB7F-F7B1-4C6E-8026-3B3C2F28EBBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortedCodingTest.Services", "SortedCodingTest.Services\SortedCodingTest.Services.csproj", "{980AD121-27BA-45BD-9A97-222D38C5D52D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortedCodingTest.Services", "SortedCodingTest.Services\SortedCodingTest.Services.csproj", "{980AD121-27BA-45BD-9A97-222D38C5D52D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortedCodingTest.Tests", "SortedCodingTest.Tests\SortedCodingTest.Tests.csproj", "{E74F70A3-275C-4659-BF15-8D9DE134FCCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{980AD121-27BA-45BD-9A97-222D38C5D52D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{980AD121-27BA-45BD-9A97-222D38C5D52D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{980AD121-27BA-45BD-9A97-222D38C5D52D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E74F70A3-275C-4659-BF15-8D9DE134FCCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E74F70A3-275C-4659-BF15-8D9DE134FCCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E74F70A3-275C-4659-BF15-8D9DE134FCCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E74F70A3-275C-4659-BF15-8D9DE134FCCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

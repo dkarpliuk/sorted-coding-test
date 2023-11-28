@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SortedCodingTest.Models;
 using SortedCodingTest.Services.Interfaces;
-using SortedCodingTest.Services.Models;
 
 namespace SortedCodingTest.Controllers
 {
@@ -22,9 +21,11 @@ namespace SortedCodingTest.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesErrorResponseType(typeof(ErrorResponse))]
-        public async Task<RainfallReadingResponse> GetLatestStationReadingsAsync([FromRoute, FromQuery] LatestStationReadingsRequest request)
+        public async Task<RainfallReadingResponse> GetRainfallReadings([FromRoute, FromQuery] LatestStationReadingsRequest request)
         {
-            return await _rainfallService.GetLatestStationReadingsAsync(request.StationId, request.Maximum);
+            var readings = await _rainfallService.GetRainfallReadingsAsync(request.StationId, request.Maximum);
+
+            return new RainfallReadingResponse { Readings = readings.ToList() };
         }
     }
 }

@@ -1,9 +1,9 @@
-﻿using SortedCodingTest.Services.Models;
+﻿using SortedCodingTest.Services.Dto;
 
 namespace SortedCodingTest.Services.Interfaces
 {
     public interface IRainfallService
     {
-        Task<RainfallReadingResponse> GetLatestStationReadingsAsync(int stationId, int limit);
+        Task<ICollection<RainfallReadingDto>> GetRainfallReadingsAsync(int stationId, int limit);
     }
 }
