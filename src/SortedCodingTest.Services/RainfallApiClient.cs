@@ -20,7 +20,7 @@ namespace SortedCodingTest.Services
             }
         }
 
-        public async Task<ICollection<RainfallApiReading>> GetLatestStationReadingsAsync(int stationId, int limit)
+        public async Task<ICollection<RainfallReading>> GetRainfallReadingsAsync(int stationId, int limit)
         {
             using var client = new HttpClient { BaseAddress = new Uri(_options.BaseUrl) };
 
@@ -34,7 +34,7 @@ namespace SortedCodingTest.Services
                 var result = JObject
                     .Parse(content)
                     .SelectToken("items")?
-                    .ToObject<List<RainfallApiReading>>()
+                    .ToObject<List<RainfallReading>>()
                     ?? throw new RainfallApiClientException("Could not parse the response");
 
                 return result;

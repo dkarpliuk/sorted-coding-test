@@ -15,7 +15,7 @@ namespace SortedCodingTest
             builder.Services.Configure<RainfallApiClientOptions>(builder.Configuration.GetSection(nameof(RainfallApiClientOptions)));
             builder.Services.AddTransient<IRainfallApiClient, RainfallApiClient>();
             builder.Services.AddTransient<IRainfallService, RainfallService>();
-            builder.Services.AddInvalidModelStateFactory();
+            builder.Services.AddInvalidModelStateHandler();
 
             var app = builder.Build();
 
