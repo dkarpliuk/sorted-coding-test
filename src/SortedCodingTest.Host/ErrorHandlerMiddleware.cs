@@ -32,7 +32,7 @@ namespace SortedCodingTest.Host
 
         private async Task HandleExceptionAsync(HttpContext context, Exception ex)
         {
-            _logger.LogError("Error occured: {message}", ex.Message);
+            _logger.LogError(ex, "Error occured: {message}", ex.Message);
 
             var errorResponse = new ErrorResponse();
 
