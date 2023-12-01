@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using SortedCodingTest.App.Exceptions;
 using SortedCodingTest.Host.Models;
 using System.Net;
+using System.Text.Json;
 
 namespace SortedCodingTest.Host
 {
@@ -47,7 +47,7 @@ namespace SortedCodingTest.Host
                 errorResponse.Message = ErrorMessages.InternalServerError;
             }
 
-            var response = JsonConvert.SerializeObject(errorResponse);
+            var response = JsonSerializer.Serialize(errorResponse);
 
             await context.Response.WriteAsync(response);
         }

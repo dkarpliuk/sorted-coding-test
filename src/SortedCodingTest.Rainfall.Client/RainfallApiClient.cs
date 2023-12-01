@@ -1,5 +1,6 @@
-﻿using Newtonsoft.Json.Linq;
-using SortedCodingTest.Rainfall.Client.Models;
+﻿using SortedCodingTest.Rainfall.Client.Models;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 
 namespace SortedCodingTest.Rainfall.Client
 {
@@ -21,10 +22,8 @@ namespace SortedCodingTest.Rainfall.Client
                 response.EnsureSuccessStatusCode();
 
                 var content = await response.Content.ReadAsStringAsync();
-                var result = JObject
-                    .Parse(content)
-                    .SelectToken("items")?
-                    .ToObject<List<RainfallApiReading>>()
+
+                var result = JsonNode.Parse(content)?["items"]?.Deserialize<List<RainfallApiReading>>()
                     ?? throw new RainfallApiClientException("Could not parse the response");
 
                 return result;
