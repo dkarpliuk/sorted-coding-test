@@ -1,8 +1,7 @@
 using Moq;
-using SortedCodingTest.Services;
-using SortedCodingTest.Services.Exceptions;
-using SortedCodingTest.Services.Interfaces;
-using SortedCodingTest.Services.Models;
+using SortedCodingTest.App;
+using SortedCodingTest.App.Exceptions;
+using SortedCodingTest.Rainfall.Client;
 
 namespace SortedCodingTest.Tests
 {
@@ -31,7 +30,7 @@ namespace SortedCodingTest.Tests
 
             var service = new RainfallService(_clientMock.Object);
 
-            await Assert.ThrowsAsync<ServiceException>(() => service.GetRainfallReadingsAsync(1, 1));
+            await Assert.ThrowsAsync<AppException>(() => service.GetRainfallReadingsAsync(1, 1));
         }
 
         [Fact]

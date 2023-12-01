@@ -1,4 +1,4 @@
-﻿namespace SortedCodingTest.App.Models
+﻿namespace SortedCodingTest.Rainfall.Client
 {
     public class RainfallReading
     {

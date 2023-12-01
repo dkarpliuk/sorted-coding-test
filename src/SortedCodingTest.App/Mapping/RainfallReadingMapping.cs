@@ -1,5 +1,5 @@
 ﻿using SortedCodingTest.App.Dto;
-using SortedCodingTest.App.Models;
+using SortedCodingTest.Rainfall.Client;
 
 namespace SortedCodingTest.App.Mapping
 {

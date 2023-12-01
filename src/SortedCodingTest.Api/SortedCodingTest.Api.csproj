@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SortedCodingTest.App\SortedCodingTest.App.csproj" />
+    <ProjectReference Include="..\SortedCodingTest.Rainfall.Client\SortedCodingTest.Rainfall.Client.csproj" />
+  </ItemGroup>
+
 </Project>

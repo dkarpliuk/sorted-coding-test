@@ -24,7 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SortedCodingTest.Services\SortedCodingTest.Services.csproj" />
+    <ProjectReference Include="..\src\SortedCodingTest.App\SortedCodingTest.App.csproj" />
+    <ProjectReference Include="..\src\SortedCodingTest.Rainfall.Client\SortedCodingTest.Rainfall.Client.csproj" />
   </ItemGroup>
 
 </Project>

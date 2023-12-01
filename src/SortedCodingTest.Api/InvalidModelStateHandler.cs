@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SortedCodingTest.Api.Models;
-using SortedCodingTest.Application.Exceptions;
+using SortedCodingTest.App.Exceptions;
 
 namespace SortedCodingTest.Api
 {

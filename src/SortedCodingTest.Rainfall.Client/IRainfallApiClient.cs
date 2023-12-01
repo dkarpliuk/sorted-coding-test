@@ -1,6 +1,4 @@
-﻿using SortedCodingTest.App.Models;
-
-namespace SortedCodingTest.App.Interfaces
+﻿namespace SortedCodingTest.Rainfall.Client
 {
     public interface IRainfallApiClient
     {

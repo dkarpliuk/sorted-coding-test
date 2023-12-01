@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SortedCodingTest.Api.Models;
-using SortedCodingTest.Application.Interfaces;
+using SortedCodingTest.App.Interfaces;
 
 namespace SortedCodingTest.Api.Controllers
 {

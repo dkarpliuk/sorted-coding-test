@@ -2,6 +2,7 @@
 using SortedCodingTest.App.Exceptions;
 using SortedCodingTest.App.Interfaces;
 using SortedCodingTest.App.Mapping;
+using SortedCodingTest.Rainfall.Client;
 using System.Net;
 
 namespace SortedCodingTest.App

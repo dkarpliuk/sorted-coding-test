@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using SortedCodingTest.Api.Models;
-using SortedCodingTest.Application.Exceptions;
+using SortedCodingTest.App.Exceptions;
 using System.Net;
 
 namespace SortedCodingTest.Api

@@ -1,4 +1,4 @@
-﻿namespace SortedCodingTest.App
+﻿namespace SortedCodingTest.Rainfall.Client
 {
     public class RainfallApiClientOptions
     {

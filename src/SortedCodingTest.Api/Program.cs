@@ -1,5 +1,6 @@
-using SortedCodingTest.Application;
-using SortedCodingTest.Application.Interfaces;
+using SortedCodingTest.App;
+using SortedCodingTest.App.Interfaces;
+using SortedCodingTest.Rainfall.Client;
 
 namespace SortedCodingTest.Api
 {
