@@ -12,8 +12,11 @@ namespace SortedCodingTest.Rainfall.Client
 
             services.AddTransient<IRainfallApiClient, RainfallApiClient>();
 
-            services.AddHttpClient<IRainfallApiClient, RainfallApiClient>(client => client.BaseAddress = new Uri(options.BaseUrl))
-                .SetHandlerLifetime(TimeSpan.FromSeconds(options.TimeoutSeconds));
+            services.AddHttpClient<IRainfallApiClient, RainfallApiClient>(client =>
+            {
+                client.BaseAddress = new Uri(options.BaseUrl);
+                client.Timeout = TimeSpan.FromSeconds(options.TimeoutSeconds);
+            });
             
             return services;
         }

@@ -10,10 +10,11 @@ namespace SortedCodingTest.Api.Models
         public int StationId { get; set; }
 
         [FromQuery]
-        public int Minimum { get; set; }
+        public int? Minimum { get; set; }
 
+        [Required]
         [FromQuery]
         [Range(0, 10000, ErrorMessage = $"Maximum value must be between 0 and 10000")]
-        public int Maximum { get; set; }
+        public int? Maximum { get; set; }
     }
 }

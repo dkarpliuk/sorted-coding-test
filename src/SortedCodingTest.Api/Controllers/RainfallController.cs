@@ -24,7 +24,7 @@ namespace SortedCodingTest.Api.Controllers
         [ProducesErrorResponseType(typeof(ErrorResponse))]
         public async Task<RainfallReadingResponse> GetRainfallReadings([FromRoute, FromQuery] LatestStationReadingsRequest request)
         {
-            var readings = await _rainfallService.GetRainfallReadingsAsync(request.StationId, request.Maximum);
+            var readings = await _rainfallService.GetRainfallReadingsAsync(request.StationId, request.Maximum.Value);
 
             return new RainfallReadingResponse { Readings = readings.ToList() };
         }
