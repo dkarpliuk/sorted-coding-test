@@ -1,30 +1,22 @@
-﻿using Microsoft.Extensions.Options;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using SortedCodingTest.Rainfall.Client.Models;
 
 namespace SortedCodingTest.Rainfall.Client
 {
     public class RainfallApiClient : IRainfallApiClient
     {
-        private readonly RainfallApiClientOptions _options;
+        private readonly HttpClient _client;
 
-        public RainfallApiClient(IOptions<RainfallApiClientOptions> options)
+        public RainfallApiClient(HttpClient client)
         {
-            _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
-
-            if (string.IsNullOrWhiteSpace(_options.BaseUrl))
-            {
-                throw new InvalidOperationException($"{nameof(_options.BaseUrl)} not specified");
-            }
+            _client = client ?? throw new ArgumentNullException(nameof(client));
         }
 
         public async Task<ICollection<RainfallApiReading>> GetRainfallReadingsAsync(int stationId, int limit)
         {
-            using var client = new HttpClient { BaseAddress = new Uri(_options.BaseUrl) };
-
             try
             {
-                var response = await client.GetAsync($"id/stations/{stationId}/readings?_sorted&_limit={limit}");
+                var response = await _client.GetAsync($"id/stations/{stationId}/readings?_sorted&_limit={limit}");
 
                 response.EnsureSuccessStatusCode();
 

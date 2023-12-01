@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
 using SortedCodingTest.App;
 using SortedCodingTest.App.Interfaces;
 using SortedCodingTest.Host;
@@ -15,10 +14,9 @@ namespace SortedCodingTest.Api
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.Configure<RainfallApiClientOptions>(builder.Configuration.GetSection(nameof(RainfallApiClientOptions)));
-            builder.Services.AddTransient<IRainfallApiClient, RainfallApiClient>();
-            builder.Services.AddTransient<IRainfallService, RainfallService>();
             builder.Services.AddInvalidModelStateHandler();
+            builder.Services.AddRainfallApiClient(builder.Configuration);
+            builder.Services.AddTransient<IRainfallService, RainfallService>();
 
             var app = builder.Build();
 
