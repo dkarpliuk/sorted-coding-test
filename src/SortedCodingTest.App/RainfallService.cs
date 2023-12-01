@@ -1,10 +1,10 @@
-﻿using SortedCodingTest.Services.Dto;
-using SortedCodingTest.Services.Exceptions;
-using SortedCodingTest.Services.Interfaces;
-using SortedCodingTest.Services.Mapping;
+﻿using SortedCodingTest.App.Dto;
+using SortedCodingTest.App.Exceptions;
+using SortedCodingTest.App.Interfaces;
+using SortedCodingTest.App.Mapping;
 using System.Net;
 
-namespace SortedCodingTest.Services
+namespace SortedCodingTest.App
 {
     public class RainfallService : IRainfallService
     {
@@ -21,7 +21,7 @@ namespace SortedCodingTest.Services
 
             if (!readings.Any())
             {
-                throw new ServiceException(ErrorMessages.NoReadingsForStation, HttpStatusCode.NotFound);
+                throw new AppException(ErrorMessages.NoReadingsForStation, HttpStatusCode.NotFound);
             }
 
             return readings.Select(x => x.ToRainfallReadingDto()).ToList();

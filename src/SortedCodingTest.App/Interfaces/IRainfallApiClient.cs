@@ -1,6 +1,6 @@
-﻿using SortedCodingTest.Services.Models;
+﻿using SortedCodingTest.App.Models;
 
-namespace SortedCodingTest.Services.Interfaces
+namespace SortedCodingTest.App.Interfaces
 {
     public interface IRainfallApiClient
     {

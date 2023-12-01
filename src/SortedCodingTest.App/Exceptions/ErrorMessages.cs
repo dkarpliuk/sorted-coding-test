@@ -1,4 +1,4 @@
-﻿namespace SortedCodingTest.Services.Exceptions
+﻿namespace SortedCodingTest.App.Exceptions
 {
     public static class ErrorMessages
     {

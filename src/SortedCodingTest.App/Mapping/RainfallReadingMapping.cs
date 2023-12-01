@@ -1,7 +1,7 @@
-﻿using SortedCodingTest.Services.Dto;
-using SortedCodingTest.Services.Models;
+﻿using SortedCodingTest.App.Dto;
+using SortedCodingTest.App.Models;
 
-namespace SortedCodingTest.Services.Mapping
+namespace SortedCodingTest.App.Mapping
 {
     public static class RainfallReadingMapping
     {

@@ -1,4 +1,4 @@
-﻿namespace SortedCodingTest.Services.Dto
+﻿namespace SortedCodingTest.App.Dto
 {
     public class RainfallReadingDto
     {

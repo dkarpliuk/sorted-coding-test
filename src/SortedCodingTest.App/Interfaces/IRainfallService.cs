@@ -1,6 +1,6 @@
-﻿using SortedCodingTest.Services.Dto;
+﻿using SortedCodingTest.App.Dto;
 
-namespace SortedCodingTest.Services.Interfaces
+namespace SortedCodingTest.App.Interfaces
 {
     public interface IRainfallService
     {

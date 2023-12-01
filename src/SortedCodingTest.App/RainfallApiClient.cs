@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
-using SortedCodingTest.Services.Exceptions;
-using SortedCodingTest.Services.Interfaces;
-using SortedCodingTest.Services.Models;
+using SortedCodingTest.App.Exceptions;
+using SortedCodingTest.App.Interfaces;
+using SortedCodingTest.App.Models;
 
-namespace SortedCodingTest.Services
+namespace SortedCodingTest.App
 {
     public class RainfallApiClient : IRainfallApiClient
     {

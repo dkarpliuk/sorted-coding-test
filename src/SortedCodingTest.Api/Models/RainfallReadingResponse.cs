@@ -1,4 +1,4 @@
-﻿using SortedCodingTest.Services.Dto;
+﻿using SortedCodingTest.Application.Dto;
 
 namespace SortedCodingTest.Api.Models
 {

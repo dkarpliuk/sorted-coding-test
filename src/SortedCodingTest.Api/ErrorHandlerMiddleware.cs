@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using SortedCodingTest.Api.Models;
-using SortedCodingTest.Services.Exceptions;
+using SortedCodingTest.Application.Exceptions;
 using System.Net;
 
 namespace SortedCodingTest.Api
@@ -34,7 +34,7 @@ namespace SortedCodingTest.Api
 
             var errorResponse = new ErrorResponse();
 
-            if (ex is ServiceException serviceException)
+            if (ex is AppException serviceException)
             {
                 context.Response.StatusCode = (int)serviceException.StatusCode;
                 errorResponse.Message = ex.Message;

@@ -1,5 +1,5 @@
-using SortedCodingTest.Services;
-using SortedCodingTest.Services.Interfaces;
+using SortedCodingTest.Application;
+using SortedCodingTest.Application.Interfaces;
 
 namespace SortedCodingTest.Api
 {
