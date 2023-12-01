@@ -1,6 +1,6 @@
-﻿namespace SortedCodingTest.Rainfall.Client
+﻿namespace SortedCodingTest.Rainfall.Client.Models
 {
-    public class RainfallReading
+    public class RainfallApiReading
     {
         public DateTime DateTime { get; set; }
 

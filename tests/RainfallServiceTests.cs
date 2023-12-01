@@ -2,6 +2,7 @@ using Moq;
 using SortedCodingTest.App;
 using SortedCodingTest.App.Exceptions;
 using SortedCodingTest.Rainfall.Client;
+using SortedCodingTest.Rainfall.Client.Models;
 
 namespace SortedCodingTest.Tests
 {
@@ -26,7 +27,7 @@ namespace SortedCodingTest.Tests
         {
             _clientMock
                 .Setup(x => x.GetRainfallReadingsAsync(It.IsAny<int>(), It.IsAny<int>()))
-                .ReturnsAsync(new List<RainfallReading>());
+                .ReturnsAsync(new List<RainfallApiReading>());
 
             var service = new RainfallService(_clientMock.Object);
 
@@ -36,7 +37,7 @@ namespace SortedCodingTest.Tests
         [Fact]
         public async Task GetRainfallReadingsAsync_ResponseContainsElements_ReturnsDto()
         {
-            var response = new List<RainfallReading> { new RainfallReading { DateTime = DateTime.Now, Value = 1 } };
+            var response = new List<RainfallApiReading> { new RainfallApiReading { DateTime = DateTime.Now, Value = 1 } };
 
             _clientMock
                 .Setup(x => x.GetRainfallReadingsAsync(It.IsAny<int>(), It.IsAny<int>()))

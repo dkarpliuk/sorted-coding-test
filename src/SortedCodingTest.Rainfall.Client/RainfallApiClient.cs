@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
+using SortedCodingTest.Rainfall.Client.Models;
 
 namespace SortedCodingTest.Rainfall.Client
 {
@@ -17,7 +18,7 @@ namespace SortedCodingTest.Rainfall.Client
             }
         }
 
-        public async Task<ICollection<RainfallReading>> GetRainfallReadingsAsync(int stationId, int limit)
+        public async Task<ICollection<RainfallApiReading>> GetRainfallReadingsAsync(int stationId, int limit)
         {
             using var client = new HttpClient { BaseAddress = new Uri(_options.BaseUrl) };
 
@@ -31,7 +32,7 @@ namespace SortedCodingTest.Rainfall.Client
                 var result = JObject
                     .Parse(content)
                     .SelectToken("items")?
-                    .ToObject<List<RainfallReading>>()
+                    .ToObject<List<RainfallApiReading>>()
                     ?? throw new RainfallApiClientException("Could not parse the response");
 
                 return result;

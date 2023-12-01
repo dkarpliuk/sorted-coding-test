@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SortedCodingTest.App\SortedCodingTest.App.csproj" />
+    <ProjectReference Include="..\SortedCodingTest.Host\SortedCodingTest.Host.csproj" />
     <ProjectReference Include="..\SortedCodingTest.Rainfall.Client\SortedCodingTest.Rainfall.Client.csproj" />
   </ItemGroup>
 

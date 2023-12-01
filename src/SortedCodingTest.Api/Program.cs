@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Mvc;
 using SortedCodingTest.App;
 using SortedCodingTest.App.Interfaces;
+using SortedCodingTest.Host;
 using SortedCodingTest.Rainfall.Client;
 
 namespace SortedCodingTest.Api

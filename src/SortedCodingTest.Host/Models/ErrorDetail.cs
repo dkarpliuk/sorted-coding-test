@@ -1,4 +1,4 @@
-﻿namespace SortedCodingTest.Api.Models
+﻿namespace SortedCodingTest.Host.Models
 {
     public class ErrorDetail
     {

@@ -1,9 +1,11 @@
-﻿using Newtonsoft.Json;
-using SortedCodingTest.Api.Models;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using SortedCodingTest.App.Exceptions;
+using SortedCodingTest.Host.Models;
 using System.Net;
 
-namespace SortedCodingTest.Api
+namespace SortedCodingTest.Host
 {
     public class ErrorHandlerMiddleware
     {

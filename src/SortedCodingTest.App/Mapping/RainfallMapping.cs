@@ -1,11 +1,11 @@
 ﻿using SortedCodingTest.App.Dto;
-using SortedCodingTest.Rainfall.Client;
+using SortedCodingTest.Rainfall.Client.Models;
 
 namespace SortedCodingTest.App.Mapping
 {
-    public static class RainfallReadingMapping
+    public static class RainfallMapping
     {
-        public static RainfallReadingDto ToRainfallReadingDto(this RainfallReading reading)
+        public static RainfallReadingDto ToRainfallReadingDto(this RainfallApiReading reading)
         {
             return new RainfallReadingDto
             {
