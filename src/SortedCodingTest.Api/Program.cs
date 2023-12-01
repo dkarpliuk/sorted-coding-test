@@ -18,6 +18,8 @@ namespace SortedCodingTest.Api
             builder.Services.AddRainfallApiClient(builder.Configuration);
             builder.Services.AddTransient<IRainfallService, RainfallService>();
 
+            builder.Logging.AddLoggingConfiguration();
+
             var app = builder.Build();
 
             app.UseMiddleware<ErrorHandlerMiddleware>();

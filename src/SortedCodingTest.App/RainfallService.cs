@@ -22,7 +22,7 @@ namespace SortedCodingTest.App
 
             if (!readings.Any())
             {
-                throw new AppException(ErrorMessages.NoReadingsForStation, HttpStatusCode.NotFound);
+                throw new AppException(string.Format(ErrorMessages.NoReadingsForStation, stationId), HttpStatusCode.NotFound);
             }
 
             return readings.Select(x => x.ToRainfallReadingDto()).ToList();

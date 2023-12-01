@@ -8,7 +8,7 @@ namespace SortedCodingTest.Rainfall.Client
     {
         public static IServiceCollection AddRainfallApiClient(this IServiceCollection services, IConfiguration config)
         {
-            var options = config.GetValue<RainfallApiClientOptions>(nameof(RainfallApiClientOptions)) ?? throw new InvalidOperationException();
+            var options = config.GetSection(nameof(RainfallApiClientOptions)).Get<RainfallApiClientOptions>() ?? throw new InvalidOperationException();
             
             services.AddHttpClient<IRainfallApiClient, RainfallApiClient>(client => client.BaseAddress = new Uri(options.BaseUrl))
                 .SetHandlerLifetime(TimeSpan.FromSeconds(options.TimeoutSeconds));
