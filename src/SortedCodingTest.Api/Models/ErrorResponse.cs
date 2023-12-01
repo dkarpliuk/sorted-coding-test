@@ -1,4 +1,4 @@
-﻿namespace SortedCodingTest.Models
+﻿namespace SortedCodingTest.Api.Models
 {
     public class ErrorResponse
     {

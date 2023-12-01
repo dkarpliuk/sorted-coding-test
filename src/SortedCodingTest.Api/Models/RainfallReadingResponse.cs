@@ -1,6 +1,6 @@
 ﻿using SortedCodingTest.Services.Dto;
 
-namespace SortedCodingTest.Models
+namespace SortedCodingTest.Api.Models
 {
     public class RainfallReadingResponse
     {

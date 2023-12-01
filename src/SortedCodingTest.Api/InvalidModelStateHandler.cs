@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SortedCodingTest.Models;
+using SortedCodingTest.Api.Models;
 using SortedCodingTest.Services.Exceptions;
 
-namespace SortedCodingTest
+namespace SortedCodingTest.Api
 {
     public static class InvalidModelStateHandler
     {

@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
-using SortedCodingTest.Models;
+using SortedCodingTest.Api.Models;
 using SortedCodingTest.Services.Exceptions;
 using System.Net;
 
-namespace SortedCodingTest
+namespace SortedCodingTest.Api
 {
     public class ErrorHandlerMiddleware
     {

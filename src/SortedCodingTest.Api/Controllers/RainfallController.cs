@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SortedCodingTest.Models;
+using SortedCodingTest.Api.Models;
 using SortedCodingTest.Services.Interfaces;
 
-namespace SortedCodingTest.Controllers
+namespace SortedCodingTest.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

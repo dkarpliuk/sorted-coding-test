@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
-namespace SortedCodingTest.Models
+namespace SortedCodingTest.Api.Models
 {
     public class LatestStationReadingsRequest
     {

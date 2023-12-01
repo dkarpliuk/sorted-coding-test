@@ -1,7 +1,7 @@
 using SortedCodingTest.Services;
 using SortedCodingTest.Services.Interfaces;
 
-namespace SortedCodingTest
+namespace SortedCodingTest.Api
 {
     public class Program
     {
