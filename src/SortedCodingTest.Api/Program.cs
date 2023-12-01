@@ -32,6 +32,11 @@ namespace SortedCodingTest.Api
 
             app.UseHttpsRedirection();
 
+            app.UseCors(builder => builder
+                .WithOrigins("*")
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
             app.MapControllers();
 
             app.Run();
