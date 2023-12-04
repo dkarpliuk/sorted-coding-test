@@ -3,6 +3,15 @@
 Test project to read data from the UK Environment Agency Rainfall API.
 .Net version - 6
 
+# Project structure
+
+The following project structure helps us isolate part of the components:
+
+- SortedCodingTest.Api - where our API-related staff is (controllers, request/response models etc.)
+- SortedCodingTest.Host - where we place the host configuration (place to configure middlewares, app configuration etc.)
+- SortedCodingTest.App - contains logic used to integrate with an external Rainfall API + application level dto’s
+- SortedCodingTest.Rainfall.Client - contains logic used to call the Rainfall API.
+
 ## Setting Up
 
 To setup this project, you need to clone the git repo
